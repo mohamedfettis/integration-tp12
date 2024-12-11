@@ -1,0 +1,36 @@
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+}
+
+/* Shape with image */
+.shape-image {
+    float: left; /* Allow text to flow around */
+    width: 200px;
+    height: 300px;
+    background: url('./solar-panel-installation.jpeg') no-repeat center / cover; /* Image de fond */
+    
+    /* Utiliser shape-outside pour une forme SVG */
+    shape-outside: url('./icons8-leaf.svg'); /* L'image doit être au format SVG */
+    shape-image-threshold: 0.5; /* Ajuster la transparence pour définir le contour de la forme */
+
+    /* Masquer l'image selon une forme */
+    -webkit-mask-image: url('./icons8-heart-upside-down.svg'); /* Ajouter un masque */
+    mask-image: url('./icons8-heart-upside-down.svg'); /* Pour les navigateurs modernes */
+    -webkit-mask-size: contain; /* Adapter la taille */
+    mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+    margin-right: 20px; /* Ajouter de l'espace avec le texte */
+    border: 2px solid #ccc; /* Ajouter une bordure pour mieux voir l'élément */
+}
+/* Clearfix for floated elements */
+
+
+p {
+    text-align: justify;
+}
